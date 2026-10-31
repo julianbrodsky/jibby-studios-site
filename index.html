@@ -497,7 +497,7 @@ let boardCache = null, roomCache = null;
 
 function layoutTown() {
   const cx = Math.round(LW / 2), stack = LW < 300;
-  const titleLines = fitLines('JIBBY STUDIOS', LW - 16);
+  const titleLines = fitLines('CAPTAIN CONTRACT', LW - 16);
   const titleY = 8 + INSET_T, subY = titleY + titleLines.length * LINE + 1;
   const shacks = {};
   const mk = (id, x, top, laneY) => {
@@ -865,7 +865,7 @@ function drawTown(gg, t) {
   title(gg, L.titleLines, L.cx, L.titleY, t, !RM);
   const tw = lineW(L.titleLines[0]);
   twinkles(gg, 3, L.cx - tw / 2 - 4, L.titleY - 4, tw + 8, L.titleLines.length * LINE + 4, t);
-  textC(gg, 'An indie game studio', L.cx, L.subY, PAL.white, PAL.ink);
+  textC(gg, 'An insurrrrrrrance game!', L.cx, L.subY, PAL.white, PAL.ink);
   if (!RM) gull(gg, ((t * 16) % (LW + 60)) - 30, Math.round(hz * 0.3) + Math.round(Math.sin(t) * 3), t);
   gg.drawImage(boardCache, 0, shoreY);
   for (let x = 0; x < LW; x++) { const fo = Math.sin(x * 0.35 + t * 2) > 0.2 ? 1 : 0; px(gg, x, shoreY - 1 - fo, PAL.foam); if (fo) px(gg, x, shoreY - 1, PAL.foam); }
